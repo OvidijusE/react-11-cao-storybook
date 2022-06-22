@@ -7,18 +7,25 @@ function Notifications({
   size = 'small',
   customFontSize = null,
   icon,
+  cancel,
 }) {
   const styles = {
     fontSize: customFontSize + 'px',
   };
   return (
-    <p
-      onClick={children}
+    <div
       style={customFontSize ? styles : {}}
       className={`${css.notification} ${css[variant] || ''} ${css[size] || ''}`}
     >
-      {children}
-    </p>
+      <div className={css.alert}>
+        <i className={`fa ${icon}`} aria-hidden='true'></i>
+        {children}
+      </div>
+
+      <div>
+        <i className={`fa ${cancel}`} aria-hidden='true'></i>
+      </div>
+    </div>
   );
 }
 Notifications.propTypes = {
@@ -31,6 +38,7 @@ Notifications.propTypes = {
     'fa-info-circle',
     'fa-check-circle-o',
   ]),
+  cancel: PropTypes.oneOf(['fa-times-circle-o']),
   customFontSize: PropTypes.number,
 };
 export default Notifications;

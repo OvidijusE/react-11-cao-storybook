@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/Button/Button';
+import Hero from './components/Hero/Hero';
 import Notification from './components/Notification/Notification';
 
 function App() {
@@ -16,10 +17,22 @@ function App() {
       </div>
 
       <div className='alerts'>
-        <Notification variant='danger'>This is danger alert</Notification>
-        <Notification variant='warning'>This is warning alert</Notification>
-        <Notification variant='info'>This is info alert</Notification>
-        <Notification variant='success'>This is success alert</Notification>
+        <Notification icon={'fa-exclamation-circle'} variant='danger' cancel={'fa-times-circle-o'}>
+          This is danger alert
+        </Notification>
+        <Notification icon={'fa-question-circle-o'} variant='warning' cancel={'fa-times-circle-o'}>
+          This is warning alert
+        </Notification>
+        <Notification icon={'fa-info-circle'} variant='info' cancel={'fa-times-circle-o'}>
+          This is info alert
+        </Notification>
+        <Notification icon={'fa-check-circle-o'} variant='success' cancel={'fa-times-circle-o'}>
+          This is success alert
+        </Notification>
+      </div>
+
+      <div className='hero'>
+        <Hero variant='primary' title='Primary hero' subtitle='Primary subtitle' />
       </div>
     </div>
   );
