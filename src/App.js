@@ -32,7 +32,7 @@ function App() {
       </div>
 
       <div className='hero'>
-        <Hero variant='primary' title='Primary hero' subtitle='Primary subtitle' />
+        <Hero type='primary' title='Primary hero' subtitle='Primary subtitle' />
       </div>
     </div>
   );

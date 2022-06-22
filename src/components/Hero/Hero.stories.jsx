@@ -9,13 +9,18 @@ export default {
 const Template = (args) => <Hero {...args} />;
 
 // funkcijos kopija
-export const TitleArgs = Template.bind({});
-TitleArgs.args = {
-  variant: 'title',
-  children: 'Primary hero',
+export const PrimaryHeroArgs = Template.bind({});
+PrimaryHeroArgs.args = {
+  type: 'primary',
+  title: 'Primary title',
+  subtitle: 'Primary subtitle',
+  //   variant: 'primary',
 };
-export const SubtitleArgs = Template.bind({});
-TitleArgs.args = {
-  variant: 'subtitle',
-  children: 'Primary subtitle',
+
+export const SecondaryHeroArgs = Template.bind({});
+SecondaryHeroArgs.args = {
+  type: 'secondary',
+  title: 'Secondary title',
+  subtitle: 'Secondary subtitle',
+  //   variant: 'secondary',
 };
