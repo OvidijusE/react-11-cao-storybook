@@ -19,6 +19,11 @@
   color: #333;
 }
 
+.danger {
+  background-color: tomato;
+  color: white;
+}
+
 /* size */
 .large {
   font-size: 22px;

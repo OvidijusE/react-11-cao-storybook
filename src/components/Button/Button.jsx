@@ -1,4 +1,5 @@
 import css from './Button.module.css';
+import PropTypes from 'prop-types';
 
 function Button({ children, variant = 'primary', size = 'medium', customFontSize = null }) {
   const styles = {
@@ -7,11 +8,16 @@ function Button({ children, variant = 'primary', size = 'medium', customFontSize
   return (
     <button
       style={customFontSize ? styles : {}}
-      className={`${css.btn} ${css[variant]} ${css[size]}`}
+      className={`${css.btn} ${css[variant] || ''} ${css[size] || ''}`}
     >
       {children}
     </button>
   );
 }
-
+Button.propTypes = {
+  childer: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+  customFontSize: PropTypes.number,
+};
 export default Button;
