@@ -1,7 +1,7 @@
 .btn {
-  border: none;
+  /* border: none; */
   color: #fff;
-  padding: 0.8em 1.6em;
+  padding: 0.7em 2em;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -11,12 +11,15 @@
 }
 /* variant */
 .primary {
-  background-color: #008cba;
+  background-color: rgb(194, 0, 73);
+  color: white;
+  border: none;
 }
 
 .secondary {
-  background-color: #e7e7e7;
-  color: #333;
+  background-color: white;
+  color: rgb(194, 0, 73);
+  border: 0.01rem solid rgb(194, 0, 73);
 }
 
 .danger {

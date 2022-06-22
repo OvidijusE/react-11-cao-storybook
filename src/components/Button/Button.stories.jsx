@@ -6,22 +6,16 @@ export default {
   component: Button,
 };
 
-export const PrimaryButton = () => <Button>Click me</Button>;
-export const PrimaryButtonLongText = () => (
-  <Button>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, reiciendis?</Button>
-);
-export const SecondaryButton = () => <Button variant='secondary'>Click me</Button>;
-
 const Template = (args) => <Button {...args} />;
 
 // funkcijos kopija
-export const SecondaryButtonArgs = Template.bind({});
-SecondaryButtonArgs.args = {
-  variant: 'secondary',
-  children: 'click me',
-};
 export const PrimaryButtonArgs = Template.bind({});
 PrimaryButtonArgs.args = {
   variant: 'primary',
-  children: 'click me',
+  children: 'Primary',
+};
+export const SecondaryButtonArgs = Template.bind({});
+SecondaryButtonArgs.args = {
+  variant: 'secondary',
+  children: 'Secondary',
 };

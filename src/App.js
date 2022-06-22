@@ -1,18 +1,26 @@
 import './App.css';
 import Button from './components/Button/Button';
+import Notification from './components/Notification/Notification';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Hello again world</h1>
-      <Button size='large'>Large btn</Button>
-      <Button variant='secondary' size='small'>
-        Small btn
-      </Button>
-      <Button>Click me</Button>
-      <Button>ha</Button>
+      <h1>Cao</h1>
+      <div className='buttons'>
+        <Button variant='primary' size='large'>
+          Primary
+        </Button>
+        <Button variant='secondary' size='large'>
+          Secondary
+        </Button>
+      </div>
 
-      <Button customFontSize={30}>customFontSize30</Button>
+      <div className='alerts'>
+        <Notification variant='danger'>This is danger alert</Notification>
+        <Notification variant='warning'>This is warning alert</Notification>
+        <Notification variant='info'>This is info alert</Notification>
+        <Notification variant='success'>This is success alert</Notification>
+      </div>
     </div>
   );
 }

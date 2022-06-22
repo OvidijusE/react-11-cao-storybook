@@ -1,0 +1,19 @@
+.App {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+.buttons {
+  gap: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.alerts {
+  max-width: 40em;
+  margin: 0 auto;
+  background-color: #333;
+  padding: 0.5em;
+}
