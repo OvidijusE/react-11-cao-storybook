@@ -1,7 +1,7 @@
 import css from './Input.module.css';
 import PropTypes from 'prop-types';
 
-function Input({ errorMsg, color = 'light', type = 'text', children, ...rest }) {
+function Input({ onChange, errorMsg, color = 'light', type = 'text', children, ...rest }) {
   const showErrror = errorMsg && <p className={css.errorMsg}>{errorMsg}</p>;
   const addErrClass = errorMsg ? css.errField : '';
 
@@ -18,7 +18,12 @@ function Input({ errorMsg, color = 'light', type = 'text', children, ...rest }) 
 
   return (
     <div>
-      <input type={type} className={`${css.input} ${css[color]} ${addErrClass}`} {...rest} />
+      <input
+        onChange={onChange}
+        type={type}
+        className={`${css.input} ${css[color]} ${addErrClass}`}
+        {...rest}
+      />
       {showErrror}
     </div>
   );

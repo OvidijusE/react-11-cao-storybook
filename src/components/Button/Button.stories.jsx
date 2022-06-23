@@ -6,7 +6,7 @@ export default {
   component: Button,
 };
 
-export const PrimaryButton = () => <Button>Click me</Button>;
+export const PrimaryButton = () => <Button>Login</Button>;
 export const PrimaryButtonLongText = () => (
   <Button>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, reiciendis?</Button>
 );

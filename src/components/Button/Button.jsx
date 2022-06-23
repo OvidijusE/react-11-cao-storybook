@@ -15,7 +15,7 @@ function Button({ children, variant = 'primary', size = 'medium', customFontSize
   );
 }
 Button.propTypes = {
-  childer: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: PropTypes.oneOf(['primary', 'secondary', 'danger']),
   customFontSize: PropTypes.number,
