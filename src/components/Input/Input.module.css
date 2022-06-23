@@ -1,4 +1,5 @@
 .input {
+  display: block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
   padding: 0.4em 0.8em;
@@ -18,4 +19,16 @@
 }
 .dark::placeholder {
   color: white;
+}
+
+.error {
+  /* background-color: rgb(182, 53, 30); */
+  color: tomato;
+  margin-top: 0.1em;
+  padding: 0.5em 1em;
+}
+
+.input.errField {
+  background-color: rgb(247, 143, 125);
+  border-color: red;
 }
