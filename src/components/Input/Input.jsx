@@ -1,19 +1,25 @@
 import css from './Input.module.css';
 import PropTypes from 'prop-types';
 
-function Input({ error, color = 'light', type = 'text', children, ...rest }) {
+function Input({ errorMsg, color = 'light', type = 'text', children, ...rest }) {
+  const showErrror = errorMsg && <p className={css.errorMsg}>{errorMsg}</p>;
+  const addErrClass = errorMsg ? css.errField : '';
+
   if (type === 'textarea') {
     return (
-      <textarea className={`${css.input} ${css.txa} ${css[color]}`} {...rest}>
-        {children}
-      </textarea>
+      <div>
+        <textarea className={`${css.input} ${css.txa} ${css[color]} ${addErrClass}`} {...rest}>
+          {children}
+        </textarea>
+        {showErrror}
+      </div>
     );
   }
 
   return (
     <div>
-      <input className={`${css.input} ${css[color]} ${error ? css.errField : ''}`} {...rest} />
-      {error && <p className={css.error}>{error}</p>}
+      <input type={type} className={`${css.input} ${css[color]} ${addErrClass}`} {...rest} />
+      {showErrror}
     </div>
   );
 }
@@ -21,8 +27,8 @@ function Input({ error, color = 'light', type = 'text', children, ...rest }) {
 Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   color: PropTypes.oneOf(['light', 'dark']),
-  type: PropTypes.oneOf(['text', 'textarea']),
-  error: PropTypes.string,
+  type: PropTypes.oneOf(['text', 'textarea', 'password', 'email']),
   value: PropTypes.string,
+  errorMsg: PropTypes.string,
 };
 export default Input;

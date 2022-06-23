@@ -55,5 +55,5 @@ DarkTextArea.args = {
 export const InputwithError = Template.bind({});
 InputwithError.args = {
   value: 'JamesBond.lt',
-  error: 'must be valid email!',
+  errorMsg: 'must be valid email!',
 };
