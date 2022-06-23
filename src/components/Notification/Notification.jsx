@@ -1,22 +1,9 @@
 import css from './Notification.module.css';
 import PropTypes from 'prop-types';
 
-function Notifications({
-  children,
-  variant = 'primary',
-  size = 'small',
-  customFontSize = null,
-  icon,
-  cancel,
-}) {
-  const styles = {
-    fontSize: customFontSize + 'px',
-  };
+function Notifications({ children, variant = 'primary', icon, cancel }) {
   return (
-    <div
-      style={customFontSize ? styles : {}}
-      className={`${css.notification} ${css[variant] || ''} ${css[size] || ''}`}
-    >
+    <div className={`${css.notification} ${css[variant] || ''} `}>
       <div className={css.alert}>
         <i className={`fa ${icon}`} aria-hidden='true'></i>
         {children}
@@ -30,7 +17,6 @@ function Notifications({
 }
 Notifications.propTypes = {
   children: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: PropTypes.oneOf(['danger', 'warning', 'info', 'success']),
   icon: PropTypes.oneOf([
     'fa-exclamation-circle',
@@ -39,6 +25,5 @@ Notifications.propTypes = {
     'fa-check-circle-o',
   ]),
   cancel: PropTypes.oneOf(['fa-times-circle-o']),
-  customFontSize: PropTypes.number,
 };
 export default Notifications;
