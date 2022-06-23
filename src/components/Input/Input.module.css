@@ -1,0 +1,15 @@
+.input {
+  font-size: 16px;
+  padding: 0.4em 0.8em;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 4px;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+.dark::placeholder {
+  color: white;
+}
