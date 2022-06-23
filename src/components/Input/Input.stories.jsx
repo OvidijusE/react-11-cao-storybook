@@ -6,7 +6,26 @@ export default {
   component: Input,
 };
 
-const Template = (args) => <Input {...args} />;
+const Wrapper = ({ children }) => (
+  <div
+    style={{
+      backgroundColor: 'lightcyan',
+      height: '200px',
+      display: 'flex',
+
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}
+  >
+    {children}
+  </div>
+);
+
+const Template = (args) => (
+  <Wrapper>
+    <Input {...args} />
+  </Wrapper>
+);
 
 export const MainInput = Template.bind({});
 MainInput.args = {
